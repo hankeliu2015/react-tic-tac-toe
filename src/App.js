@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      board: ["","X","","","O","","","X","",],
+      board: ["","","","","","","","","",],
     }
   }
   render() {
