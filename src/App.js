@@ -10,6 +10,14 @@ class App extends Component {
       board: ["","","","","","","","","",],
     }
   }
+
+  handleClick= (cellIndex) => {
+    const cloneBoard = [...this.state.board];
+    cloneBoard[cellIndex] = "X";
+
+    this.setState({board: cloneBoard})
+  }
+
   render() {
     return (
       <div className="App">
@@ -17,7 +25,7 @@ class App extends Component {
         {/*  <img src={logo} className="App-logo" alt="logo" /> */}
         Welcome to Tic-Tac-Toe</header>
       <div id="board">
-        {this.state.board.map((cell) => <p class="cell">{cell}</p>)}
+        {this.state.board.map((cell, index) => <p key={index} className="cell" onClick={() => this.handleClick(index)}>{cell}</p>)}
       </div>
       </div>
     );
