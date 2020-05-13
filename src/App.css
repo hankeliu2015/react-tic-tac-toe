@@ -22,7 +22,6 @@
   }
 } */
 
-
 .App {
   background-color: #282c34;
   min-height: 100vh;
@@ -37,5 +36,18 @@
   font-size: 16px;
   color: white;
 
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 4px solid white;
+}
+
+.cell {
+  padding: 1em;
+  margin: 0;
+  border: 1px solid white;
 
 }

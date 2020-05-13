@@ -16,8 +16,8 @@ class App extends Component {
         <header className="App-header">
         {/*  <img src={logo} className="App-logo" alt="logo" /> */}
         Welcome to Tic-Tac-Toe</header>
-      <div>
-        {this.state.board.map((cell) => <p>{cell}</p>)}
+      <div id="board">
+        {this.state.board.map((cell) => <p class="cell">{cell}</p>)}
       </div>
       </div>
     );
